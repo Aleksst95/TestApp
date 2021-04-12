@@ -15,6 +15,14 @@ create-migration:
 migrate:
 	docker exec --user=1000 alex-test-php-fpm php artisan migrate
 
+# Example:
+# make create-seeder name=TableSeeder
+create-seeder:
+	docker exec --user=1000 alex-test-php-fpm php artisan make:seeder $(name)
+
+seed:
+	docker exec --user=1000 alex-test-php-fpm php artisan db:seed
+
 composer-install:
 	docker exec --user=1000 alex-test-php-fpm composer install
 
