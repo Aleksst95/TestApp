@@ -124,6 +124,8 @@ class BuildingsController extends BaseController
      */
     public function index(IndexRequest $request): JsonResponse
     {
+        // For the test application I didn't create an additional layer to work with the DB data.
+        // For this task it will be over engineering.
         $items = Building::query()
             ->nameLike($request->data()->name())
             ->priceBetween($request->data()->priceFrom(), $request->data()->priceTo())
