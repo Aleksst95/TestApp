@@ -1,0 +1,30 @@
+@import '~normalize-scss/sass/normalize';
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+    background-color: #f2f2f2;
+}
+
+.el-header {
+    background-color: #feebef;
+}
+
+.buildings-search-page {
+    background-color: #ffffff;
+    .el-collapse {
+        border: none;
+
+        .el-collapse-item__header:hover {
+            color: #346eb8;
+        }
+    }
+
+    .buildings-search-form {
+        .line {
+            text-align: center;
+        }
+    }
+}

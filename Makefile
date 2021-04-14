@@ -23,6 +23,9 @@ create-seeder:
 seed:
 	docker exec --user=1000 alex-test-php-fpm php artisan db:seed
 
+migration-seed:
+	docker exec --user=1000 alex-test-php-fpm php artisan migrate:fresh --seed
+
 composer-install:
 	docker exec --user=1000 alex-test-php-fpm composer install
 
@@ -37,3 +40,12 @@ phpstan:
 
 phpcs:
 	docker exec --user=1000 alex-test-php-fpm composer phpcs
+
+test:
+	docker exec --user=1000 alex-test-php-fpm composer tests
+
+generate-app-key:
+	docker exec --user=1000 alex-test-php-fpm php artisan key:generate
+
+composer-install:
+	docker exec --user=1000 alex-test-php-fpm composer install

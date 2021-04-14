@@ -2,12 +2,21 @@
 
 namespace App\Models;
 
+use App\Models\Building\BuildingBuilder;
 use Illuminate\Database\Eloquent\Model;
 
 class Building extends Model
 {
     /**
-     * @var array
+     * @return BuildingBuilder
      */
-    protected $guarded = [];
+    public static function query()
+    {
+        return parent::query();
+    }
+
+    public function newEloquentBuilder($query)
+    {
+        return new BuildingBuilder($query);
+    }
 }
