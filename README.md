@@ -13,8 +13,3 @@
 ## Additional information
 
 - [API Documentation](http://alex-test.local/api/documentation)
-
-I didn't add pagination because it wasn't part of the task. I don't want to waste development time on features
-that weren't asked.
-Also, I understand that the Frontend application can be broader in functionality (like autocomplete for name filter),
-but I did not do that for the same reason as before.
