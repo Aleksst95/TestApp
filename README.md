@@ -2,7 +2,7 @@
 
 1. `cp ./docker/.env.example ./docker/.env` - create docker .env file. Check ports availability from the .env file 
    before the next step. 
-2. `make up` - run docker containers
+2. `make start` - run docker containers
 3. `cp ./.env.example ./.env` - create laravel .env file
 4. `make generate-app-key` - generate the Laravel Application Key
 5. `make composer-install` - get composer dependencies
